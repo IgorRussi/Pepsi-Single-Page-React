@@ -15,7 +15,7 @@ export default function Header() {
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 140vh;
+  min-height: 100vh;
   /* align-items: center; */
   background: #0062be;
   transition: 0.5s;

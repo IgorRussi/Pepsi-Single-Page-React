@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Pepsi from "../static/pepsi001.png";
 import Pepsi2 from "../static/pepsi002.png";
 import Pepsi3 from "../static/pepsi003.png";
+import Facebook from "../static/facebook.png";
+import Instagram from "../static/instagram.png";
+import Twitter from "../static/twitter.png";
 
 const Herosection = () => {
   return (
@@ -25,22 +28,41 @@ const Herosection = () => {
         </Textbox>
 
         <Imgbox>
-          <img src={Pepsi} alt="Pepsi"></img>
+          <img src={Pepsi} alt="Pepsi" className="pepsi"></img>
         </Imgbox>
-        <Thumb>
+        <Sci>
           <ul>
             <li>
-              <img src={Pepsi} alt="Pepsi"></img>
+              <a href="/">
+                <img src={Instagram} alt="Instagram"></img>
+              </a>
             </li>
             <li>
-              <img src={Pepsi2} alt="Pepsi2"></img>
+              <a href="/">
+                <img src={Facebook} alt="Facebook"></img>
+              </a>
             </li>
             <li>
-              <img src={Pepsi3} alt="Pepsi3"></img>
+              <a href="/">
+                <img src={Twitter} alt="Twitter"></img>
+              </a>
             </li>
           </ul>
-        </Thumb>
+        </Sci>
       </ContentWrapper>
+      <Thumb>
+        <ul>
+          <li>
+            <img src={Pepsi} alt="Pepsi"></img>
+          </li>
+          <li>
+            <img src={Pepsi2} alt="Pepsi2"></img>
+          </li>
+          <li>
+            <img src={Pepsi3} alt="Pepsi3"></img>
+          </li>
+        </ul>
+      </Thumb>
     </Wrapper>
   );
 };
@@ -58,7 +80,7 @@ const ContentWrapper = styled.div`
   display: grid;
   width: 100%;
   height: 200px;
-  grid-template-columns: 58% auto;
+  grid-template-columns: 58% auto auto;
   justify-content: center;
   margin-top: 10rem;
 `;
@@ -111,11 +133,37 @@ const Imgbox = styled.div`
   }
 `;
 
-const Thumb = styled.div`
-  width: 100%;
-  padding: 20px 20px;
+const Sci = styled.div`
   display: flex;
-  align-items: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    filter: invert(1);
+    margin-top: 12px;
+    margin-left: 30px;
+  }
+
+  img {
+    transform: scale(0.6);
+  }
+`;
+
+const Thumb = styled.div`
+  bottom: 90px;
+  position: absolute;
+  display: flex;
+  margin: auto;
+  width: 94%;
+  padding: 10px;
   justify-content: center;
 
   ul {
@@ -128,6 +176,9 @@ const Thumb = styled.div`
     margin: 0 20px;
     cursor: pointer;
     transition: 0.5s;
+    :hover {
+      transform: translateY(-15px);
+    }
   }
 
   img {
