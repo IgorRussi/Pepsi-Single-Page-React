@@ -8,6 +8,10 @@ import Instagram from "../static/instagram.png";
 import Twitter from "../static/twitter.png";
 
 const Herosection = () => {
+  function handleClick(name) {
+    document.querySelector(".pepsi").src = name;
+  }
+
   return (
     <Wrapper>
       <ContentWrapper>
@@ -53,13 +57,25 @@ const Herosection = () => {
       <Thumb>
         <ul>
           <li>
-            <img src={Pepsi} alt="Pepsi"></img>
+            <img
+              src={Pepsi}
+              onClick={() => handleClick(Pepsi)}
+              alt="Pepsi"
+            ></img>
           </li>
           <li>
-            <img src={Pepsi2} alt="Pepsi2"></img>
+            <img
+              src={Pepsi2}
+              onClick={() => handleClick(Pepsi2)}
+              alt="Pepsi2"
+            ></img>
           </li>
           <li>
-            <img src={Pepsi3} alt="Pepsi3"></img>
+            <img
+              src={Pepsi3}
+              onClick={() => handleClick(Pepsi3)}
+              alt="Pepsi3"
+            ></img>
           </li>
         </ul>
       </Thumb>
