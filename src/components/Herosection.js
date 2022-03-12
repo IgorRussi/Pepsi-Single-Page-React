@@ -99,6 +99,11 @@ const ContentWrapper = styled.div`
   grid-template-columns: 58% auto auto;
   justify-content: center;
   margin-top: 10rem;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 17rem;
+  }
 `;
 
 const Textbox = styled.div`
@@ -140,6 +145,10 @@ const Textbox = styled.div`
     text-decoration: none;
     font-family: "Poppins", "sans-serif";
     text-transform: uppercase;
+    transition: 0.5s;
+    :hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

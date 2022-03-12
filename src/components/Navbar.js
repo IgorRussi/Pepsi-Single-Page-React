@@ -53,6 +53,10 @@ const ListWrapper = styled.div`
 
   li {
     list-style: none;
+    transition: 0.5s;
+    :hover {
+      transform: translateY(-15px);
+    }
   }
 
   a {
@@ -85,5 +89,10 @@ const NavbarWrapper = styled.div`
   img {
     max-width: 80px;
     position: relative;
+    transition: 0.5s;
+    :hover {
+      transform: scale(1.1);
+      transform: rotate(360deg);
+    }
   }
 `;

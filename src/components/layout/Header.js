@@ -19,4 +19,8 @@ const Wrapper = styled.div`
   /* align-items: center; */
   background: #0062be;
   transition: 0.5s;
+
+  @media (max-width: 1023px) {
+    min-height: 200vh;
+  }
 `;
